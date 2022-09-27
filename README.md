@@ -3,10 +3,7 @@ Objective of the Project:
 ```
 If the user wants to validate a container image memory constraints. 
 ```
-Project: 
-```
-It allocates memory in 1mb blocks
-```
+
 Commands : 
 ```
 allocate 4Mb of data ./golang-memtest 4
