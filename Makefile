@@ -58,5 +58,3 @@ docker-test-bigmem:
 
 docker-test-bigmem-slow:
 	sudo docker run -it --rm -m 8m --memory-swap 8m $(OPV) 12 2000
-	# binary can also take arguments as env vars
-	#sudo docker run -it --rm -m 8m --memory-swap 8m -e nmb=12 -e nms=2000 $(OPV)
