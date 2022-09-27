@@ -12,7 +12,7 @@ import (
  
 )
 
-func Print(a ...interface{}) (n int, err error)
+//func Print(a ...interface{}) (n int, err error)
 
 func main() {
 
