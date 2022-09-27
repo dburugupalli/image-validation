@@ -34,7 +34,7 @@ func main() {
       resarr[i] = make([]byte, 1024*1024)
       // populate array so it takes up memory and  if this is not done, it will not fill up memory space
       rand.Read(resarr[i])
-      PrintMemUsage()
+      PrintMemoryUsage()
       time.Sleep( time.Duration(nms) * time.Millisecond)
       //fmt.Printf("Total allocated: %dMb\n",i+1)
     }
