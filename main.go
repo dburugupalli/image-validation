@@ -12,6 +12,8 @@ import (
  
 )
 
+func Print(a ...interface{}) (n int, err error)
+
 func main() {
 
     // alert to any OS signals sent while running
@@ -25,7 +27,7 @@ func main() {
 
     // print the memory usage before the tests begins
     PrintMemoryUsage()
-    fmt.Printf("Asked to allocate %dMb\n\n",nmb)
+    Print("Asked to allocate %dMb\n\n",nmb)
 
     // allocate memory 1Mb at a time
     rand.Seed(time.Now().UTC().UnixNano())
@@ -38,10 +40,10 @@ func main() {
       time.Sleep( time.Duration(nms) * time.Millisecond)
       //fmt.Printf("Total allocated: %dMb\n",i+1)
     }
-    fmt.Printf("\n")
+    Print("\n")
     // print the memoryusage after the tests complete
     PrintMemoryUsage()
-    fmt.Printf("SUCCESS allocating %dMb\n",len(resarr))
+    Print("successfully allocated memory %dMb\n",len(resarr))
 }
 
 
@@ -55,10 +57,10 @@ func bToMb(b uint64) uint64 {
 func PrintMemoryUsage() {
         var m runtime.MemStats
         runtime.ReadMemStats(&m)
-        fmt.Printf("Alloc = %v MiB", bToMb(m.Alloc))
-        fmt.Printf("\tTotalAlloc = %v MiB", bToMb(m.TotalAlloc))
-        fmt.Printf("\tSys = %v MiB", bToMb(m.Sys))
-        fmt.Printf("\tNumGC = %v\n", m.NumGC)
+        Print("Alloc = %v MiB", bToMb(m.Alloc))
+        Print("\tTotalAlloc = %v MiB", bToMb(m.TotalAlloc))
+        Print("\tSys = %v MiB", bToMb(m.Sys))
+        Print("\tNumGC = %v\n", m.NumGC)
 }
 
 
@@ -74,7 +76,7 @@ func ReadEnvOrArgs(posIndex int,pname string,defaultString string) int {
     }
     nmb,err := strconv.Atoi(nmbstr)
     if err != nil {
-      fmt.Println(err)
+      Print(err)
       os.Exit(1)
     }
     return nmb
