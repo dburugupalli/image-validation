@@ -5,12 +5,13 @@ If the user wants to validate a container image memory constraints.
 ```
 
 
-Container Image Validation - Steps - Create a channel to catch for interrupts. 
+Container Image Validation - Steps - 
 ```
-1. Before the tests begin we will print the memory usage, 
-2. start the timer
-3. create an array and populate the array that it takes up memory
-4. print the remaning memory usage. 
+1. Create a channel to catch for interrupts. 
+2. Before the tests begin we will print the memory usage, 
+3. start the timer
+4. create an array and populate the array that it takes up memory
+5. print the remaning memory usage. 
 ```
 
 
