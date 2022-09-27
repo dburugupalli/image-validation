@@ -6,9 +6,9 @@ If the user wants to validate a container image memory constraints.
 
 Commands : 
 ```
-allocate 4Mb of data ./golang-memtest 4
+allocate 4Mb of data ./main 4
 
-allocate 8Mb of data ./golang-memtest 8
+allocate 8Mb of data ./main 8
 ```
 
 Make Targets
