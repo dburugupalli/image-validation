@@ -51,10 +51,10 @@ go-compile-local:
 	CGO_ENABLED=0 go build .
 
 docker-test-ok:
-	sudo docker run -it --rm -m 8m --memory-swap 8m $(OPV) 4
+	sudo docker run -it --rm -m 6m --memory-swap 6m $(OPV) 4
 
 docker-test-bigmem:
-	sudo docker run -it --rm -m 8m --memory-swap 8m $(OPV) 12
+	sudo docker run -it --rm -m 6m --memory-swap 6m $(OPV) 6
 
 docker-test-bigmem-slow:
-	sudo docker run -it --rm -m 8m --memory-swap 8m $(OPV) 12 2000
+	sudo docker run -it --rm -m 6m --memory-swap 6m $(OPV) 12 2000
