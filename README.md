@@ -4,6 +4,8 @@ Objective of the Project:
 If the user wants to validate a container image memory constraints. 
 ```
 
+
+Container Image Validation - Steps - Create a channel to catch for interrupts. 
 ```
 1. Before the tests begin we will print the memory usage, 
 2. start the timer
