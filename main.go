@@ -23,8 +23,8 @@ func main() {
     nms := ReadEnvOrArgs(2,"nms","100")
 
 
-    // show initial usage 
-    PrintMemUsage()
+    // print the memory usage before the tests begins
+    PrintMemoryUsage()
     fmt.Printf("Asked to allocate %dMb\n\n",nmb)
 
     // allocate memory 1Mb at a time
@@ -39,8 +39,8 @@ func main() {
       //fmt.Printf("Total allocated: %dMb\n",i+1)
     }
     fmt.Printf("\n")
-    // show final usage
-    PrintMemUsage()
+    // print the memoryusage after the tests complete
+    PrintMemoryUsage()
     fmt.Printf("SUCCESS allocating %dMb\n",len(resarr))
 }
 
@@ -52,7 +52,7 @@ func bToMb(b uint64) uint64 {
 
 
 // For info on each, see: https://golang.org/pkg/runtime/#MemStats
-func PrintMemUsage() {
+func PrintMemoryUsage() {
         var m runtime.MemStats
         runtime.ReadMemStats(&m)
         fmt.Printf("Alloc = %v MiB", bToMb(m.Alloc))
