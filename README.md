@@ -4,6 +4,14 @@ Objective of the Project:
 If the user wants to validate a container image memory constraints. 
 ```
 
+```
+1. Before the tests begin we will print the memory usage, 
+2. start the timer
+3. create an array and populate the array that it takes up memory
+4. print the remaning memory usage. 
+```
+
+
 Commands : 
 ```
 allocate 4Mb of data ./main 4
