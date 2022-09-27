@@ -27,7 +27,7 @@ func main() {
 
     // print the memory usage before the tests begins
     PrintMemoryUsage()
-    Print("Asked to allocate %dMb\n\n",nmb)
+    fmt.Println("Asked to allocate %dMb\n\n",nmb)
 
     // allocate memory 1Mb at a time
     rand.Seed(time.Now().UTC().UnixNano())
@@ -40,10 +40,10 @@ func main() {
       time.Sleep( time.Duration(nms) * time.Millisecond)
       //fmt.Printf("Total allocated: %dMb\n",i+1)
     }
-    Print("\n")
+    fmt.Println("\n")
     // print the memoryusage after the tests complete
     PrintMemoryUsage()
-    Print("successfully allocated memory %dMb\n",len(resarr))
+    fmt.Println("successfully allocated memory %dMb\n",len(resarr))
 }
 
 
@@ -76,7 +76,7 @@ func ReadEnvOrArgs(posIndex int,pname string,defaultString string) int {
     }
     nmb,err := strconv.Atoi(nmbstr)
     if err != nil {
-      Print(err)
+      fmt.Println(err)
       os.Exit(1)
     }
     return nmb
