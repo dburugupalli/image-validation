@@ -27,7 +27,7 @@ func main() {
 
     // print the memory usage before the tests begins
     PrintMemoryUsage()
-    fmt.Println("Asked to allocate %dMb\n\n",nmb)
+    fmt.Printf("Asked to allocate %dMb\n\n",nmb)
 
     // allocate memory 1Mb at a time
     rand.Seed(time.Now().UTC().UnixNano())
@@ -40,10 +40,10 @@ func main() {
       time.Sleep( time.Duration(nms) * time.Millisecond)
       //fmt.Printf("Total allocated: %dMb\n",i+1)
     }
-    fmt.Println("\n")
+    fmt.Printf("\n")
     // print the memoryusage after the tests complete
     PrintMemoryUsage()
-    fmt.Println("successfully allocated memory %dMb\n",len(resarr))
+    fmt.Printf("successfully allocated memory %dMb\n",len(resarr))
 }
 
 
