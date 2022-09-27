@@ -1,7 +1,7 @@
-OWNER := dburugupalli
+ow := dburugupalli
 PROJECT := container-image-validation
 VERSION := 0.0.1
-OPV := $(OWNER)/$(PROJECT):$(VERSION)
+OPV := $(ow)/$(PROJECT):$(VERSION)
 
 ## builds docker image
 docker-build:
