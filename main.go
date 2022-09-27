@@ -57,10 +57,10 @@ func bToMb(b uint64) uint64 {
 func PrintMemoryUsage() {
         var m runtime.MemStats
         runtime.ReadMemStats(&m)
-        Print("Alloc = %v MiB", bToMb(m.Alloc))
-        Print("\tTotalAlloc = %v MiB", bToMb(m.TotalAlloc))
-        Print("\tSys = %v MiB", bToMb(m.Sys))
-        Print("\tNumGC = %v\n", m.NumGC)
+        fmt.Printf("Alloc = %v MiB", bToMb(m.Alloc))
+        fmt.Printf("\tTotalAlloc = %v MiB", bToMb(m.TotalAlloc))
+        fmt.Printf("\tSys = %v MiB", bToMb(m.Sys))
+        fmt.Printf("\tNumGC = %v\n", m.NumGC)
 }
 
 
