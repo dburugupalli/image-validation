@@ -1,6 +1,6 @@
-OWNER := fabianlee
-PROJECT := golang-memtest
-VERSION := 1.0.0
+OWNER := dburugupalli
+PROJECT := container-image-validation
+VERSION := 0.0.1
 OPV := $(OWNER)/$(PROJECT):$(VERSION)
 
 ## builds docker image
@@ -58,5 +58,3 @@ docker-test-bigmem:
 
 docker-test-bigmem-slow:
 	sudo docker run -it --rm -m 8m --memory-swap 8m $(OPV) 12 2000
-	# binary can also take arguments as env vars
-	#sudo docker run -it --rm -m 8m --memory-swap 8m -e nmb=12 -e nms=2000 $(OPV)
