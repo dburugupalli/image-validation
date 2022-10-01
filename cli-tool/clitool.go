@@ -6,6 +6,7 @@ cname - will lookup the CNAME for a given host
 mx - will lookup the mail exchange records for a given host
 ip - will lookup the IP addresses for a given host.
 */
+package clitool
 
 import (
 "fmt"
